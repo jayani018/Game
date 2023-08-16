@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <link rel="stylesheet" href="assests/css/bootstrap.css">
+    <script src="assests/fontosam/fontawesome-free-6.4.0-web/js/all.js"></script>
+    <link rel="stylesheet" href="assests/fontosam/fontawesome-free-6.4.0-web/css/all.css">
+    <style>
+        body{
+            background-color: black;
+        }
+        section{
+            position: absolute;
+            display: flex;
+            background-color: black;
+            width: 90%;
+            height: 90%;
+            left: 5%;
+            top: 7%;
+
+        }
+        #fullImg{
+            position: absolute;
+            left: -3%;
+            top: 7% ;
+        }
+        #frame {
+            height: 500px;
+            width: 333px;
+            left: 36.7%;
+            top: 40px;
+            position: absolute;
+            display: grid;
+            grid-column: 2;
+            grid-row: 2;
+            background-color: red;
+        }
+        #frame>div{
+            position: absolute;
+            background-color: blue;
+            width: 166px;
+            height: 253px;
+        }
+        .cropImg{
+            display: grid;
+            grid-row: 4;
+            grid-column: 4;
+            gap: 3px;
+            height: 20px;
+
+        }
+        section>div:hover{
+
+        }
+        #cropImg1{
+            position: absolute;
+            left: 36.7%;
+            top: 35px;
+        }
+        #cropImg2{
+            position: absolute;
+            left: 617px;
+            top: 35px;
+        }
+        #cropImg3{
+            position: absolute;
+            left: 36.7%;
+            top: 285px;
+
+        }
+       #cropImg4{
+            position: absolute;
+            left: 617px;
+            top: 285px;
+        }
+       #marks{
+           height: 500px;
+           width: 333px;
+           left: 70%;
+           top: 40px;
+           position: absolute;
+           display: grid;
+           background-color: red;
+       }
+
+    </style>
+
+
+
+</head>
+<body>
+<section >
+    <div id="fullImg"><img src="assests/image/lightDog.jpg"></div>
+    <div id="frame">
+        <div id="frame1"></div>
+        <div id="frame2"></div>
+        <div id="frame3"></div>
+        <div id="frame4"></div>
+    </div>
+    <div class="cropImg" id="cropImg1"><img src="assests/image/cropImage/lightDogParts/asdd/image_part_004.jpg"></div>
+    <div class="cropImg" id="cropImg2"><img src="assests/image/cropImage/lightDogParts/asdd/image_part_002.jpg"></div>
+    <div class="cropImg" id="cropImg3"><img src="assests/image/cropImage/lightDogParts/asdd/image_part_001.jpg"></div>
+    <div class="cropImg" id="cropImg4"><img src="assests/image/cropImage/lightDogParts/asdd/image_part_003.jpg"></div>
+    <div id="marks">
+        <label >jayani</label>
+        <h1>Your Won</h1>
+        <div></div>
+        <div></div>
+        <button>next</button>
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script>
+    $( function() {
+        $( "#cropImg1" ).draggable();
+        $( "#frame1" ).droppable({
+            drop: function( event, ui ) {
+                $( this )
+                    .addClass( "ui-state-highlight" )
+                    .find( "p" )
+                    .html( "Dropped!" );
+            }
+        });
+    } );
+    $( function() {
+        $( "#cropImg2" ).draggable();
+        $( "#frame2" ).droppable({
+            drop: function( event, ui ) {
+                $( this )
+                    .addClass( "ui-state-black" )
+                    .find( "p" )
+                    .html( "Dropped!" );
+            }
+        });
+    } );
+    $( function() {
+        $("#cropImg3").draggable();
+        $("#frame3").droppable({
+            drop: function( event, ui ) {
+                $( this )
+                    .addClass( "ui-state-black" )
+                    .find( "p" )
+                    .html( "Dropped!" );
+            }
+        });
+    } );
+    $( function() {
+        $( "#cropImg4" ).draggable();
+        $( "#frame4" ).droppable({
+            drop: function( event, ui ) {
+                $( this )
+                    .addClass( "ui-state-black" )
+                    .find( "p" )
+                    .html( "Dropped!" );
+            }
+        });
+    } );
+
+
+</script>
+</body>
+</html>
