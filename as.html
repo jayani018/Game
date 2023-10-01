@@ -8,40 +8,51 @@
     <link rel="stylesheet" href="assests/fontosam/fontawesome-free-6.4.0-web/css/all.css">
     <style>
         body{
-            background-color: black;
+            background-color: white;
         }
-        section{
-            position: absolute;
-            display: flex;
-            background-color: black;
-            width: 90%;
-            height: 90%;
-            left: 5%;
-            top: 7%;
+        /*section{*/
+        /*    position: absolute;*/
+        /*    display: flex;*/
+        /*    background-color: gray;*/
+        /*    width: 90%;*/
+        /*    height: 90%;*/
+        /*    left: 5%;*/
+        /*    top: 7%;*/
 
-        }
+        /*}*/
         #fullImg{
             position: absolute;
-            left: -3%;
+            left: 10%;
             top: 7% ;
         }
-        #frame {
-            height: 500px;
+        #frame{
+            display: flex;
+            position: absolute;
+            height: 505px;
+            /*background-color: #a52834;*/
+            /*border: black;*/
             width: 333px;
-            left: 36.7%;
+            left: 50%;
             top: 40px;
-            position: absolute;
-            display: grid;
-            grid-column: 2;
-            grid-row: 2;
-            background-color: red;
+            -webkit-box-shadow: 0 0 14px rgba(0,0,5,.5);
         }
-        #frame>div{
-            position: absolute;
-            background-color: blue;
-            width: 166px;
-            height: 253px;
-        }
+        /*#frame {*/
+        /*    height: 500px;*/
+        /*    width: 333px;*/
+        /*    left: 36.7%;*/
+        /*    top: 40px;*/
+        /*    position: absolute;*/
+        /*    display: grid;*/
+        /*    grid-column: 2;*/
+        /*    grid-row: 2;*/
+        /*    background-color: red;*/
+        /*}*/
+        /*#frame>div{*/
+        /*    position: absolute;*/
+        /*    background-color: blue;*/
+        /*    width: 166px;*/
+        /*    height: 253px;*/
+        /*}*/
         .cropImg{
             display: grid;
             grid-row: 4;
@@ -55,34 +66,26 @@
         }
         #cropImg1{
             position: absolute;
-            left: 36.7%;
-            top: 35px;
+            left: 0%;
+            top: 0px;
         }
         #cropImg2{
             position: absolute;
-            left: 617px;
-            top: 35px;
+            left: 167px;
+            top: 0px;
         }
         #cropImg3{
             position: absolute;
-            left: 36.7%;
-            top: 285px;
+            left: 0%;
+            top: 252px;
 
         }
        #cropImg4{
             position: absolute;
-            left: 617px;
-            top: 285px;
+            left: 167px;
+            top: 252px;
         }
-       #marks{
-           height: 500px;
-           width: 333px;
-           left: 70%;
-           top: 40px;
-           position: absolute;
-           display: grid;
-           background-color: red;
-       }
+
 
     </style>
 
@@ -90,26 +93,20 @@
 
 </head>
 <body>
-<section >
     <div id="fullImg"><img src="assests/image/lightDog.jpg"></div>
-    <div id="frame">
-        <div id="frame1"></div>
-        <div id="frame2"></div>
-        <div id="frame3"></div>
-        <div id="frame4"></div>
-    </div>
+<!--    <div id="frame">-->
+<!--        <div id="frame1"></div>-->
+<!--        <div id="frame2"></div>-->
+<!--        <div id="frame3"></div>-->
+<!--        <div id="frame4"></div>-->
+<!--    </div>-->
+    <section id="frame">
     <div class="cropImg" id="cropImg1"><img src="assests/image/cropImage/lightDogParts/asdd/image_part_004.jpg"></div>
     <div class="cropImg" id="cropImg2"><img src="assests/image/cropImage/lightDogParts/asdd/image_part_002.jpg"></div>
     <div class="cropImg" id="cropImg3"><img src="assests/image/cropImage/lightDogParts/asdd/image_part_001.jpg"></div>
     <div class="cropImg" id="cropImg4"><img src="assests/image/cropImage/lightDogParts/asdd/image_part_003.jpg"></div>
-    <div id="marks">
-        <label >jayani</label>
-        <h1>Your Won</h1>
-        <div></div>
-        <div></div>
-        <button>next</button>
-    </div>
-</section>
+    </section>
+
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 <script>
