@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Level One</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <link rel="stylesheet" href="../assests/css/bootstrap.css">
+    <script src="../assests/fontosam/fontawesome-free-6.4.0-web/js/all.js"></script>
+    <link rel="stylesheet" href="../assests/fontosam/fontawesome-free-6.4.0-web/css/all.css">
+    <style>
+        body{
+            background-color: white;
+        }
+        /*section{*/
+        /*    position: absolute;*/
+        /*    display: flex;*/
+        /*    background-color: gray;*/
+        /*    width: 90%;*/
+        /*    height: 90%;*/
+        /*    left: 5%;*/
+        /*    top: 7%;*/
+
+        /*}*/
+        #fullImgN{
+            display: flex;
+            position: absolute;
+            height: 512px;
+            width: 339px;
+            left: 10%;
+            top: 7% ;
+            /*image-rendering: inherit;*/
+        }
+        #frame{
+            display: flex;
+            position: absolute;
+            height: 512px;
+            /*background-color: #a52834;*/
+            /*border: black;*/
+            border: 3px solid red;
+            width: 339px;
+            left: 50%;
+            top: 40px;
+            -webkit-box-shadow: 0 0 14px rgba(0,0,5,.5);
+        }
+        /*#frame {*/
+        /*    height: 500px;*/
+        /*    width: 333px;*/
+        /*    left: 36.7%;*/
+        /*    top: 40px;*/
+        /*    position: absolute;*/
+        /*    display: grid;*/
+        /*    grid-column: 2;*/
+        /*    grid-row: 2;*/
+        /*    background-color: red;*/
+        /*}*/
+        /*#frame>div{*/
+        /*    position: absolute;*/
+        /*    background-color: blue;*/
+        /*    width: 166px;*/
+        /*    height: 253px;*/
+        /*}*/
+        .cropImg{
+            display: grid;
+            grid-row: 4;
+            grid-column: 4;
+            gap: 3px;
+            /*height: 20px;*/
+            /*width: 20px;*/
+
+        }
+        section>div:hover{
+
+        }
+        #cropImg1{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            height: 50px;
+            width: 168px;
+        }
+        #cropImg2{
+            position: absolute;
+            left: 168px;
+            top: 0px;
+            height: 50px;
+            width: 168px;
+        }
+        #cropImg3{
+            position: absolute;
+            left: 0%;
+            top: 252px;
+            height: 50px;
+            width: 168px;
+
+        }
+        #cropImg4{
+            position: absolute;
+            left: 167px;
+            top: 253px;
+            height: 50px;
+            width: 168px;
+        }
+
+
+    </style>
+
+
+
+</head>
+<body class="level_one">
+<div id="fullImgN"><img src="../assests/image/level_one/GALERI%20WALLPAPER%20💗.png"></div>
+<!--    <div id="frame">-->
+<!--        <div id="frame1"></div>-->
+<!--        <div id="frame2"></div>-->
+<!--        <div id="frame3"></div>-->
+<!--        <div id="frame4"></div>-->
+<!--    </div>-->
+<section id="frame">
+    <div class="cropImg" id="cropImg1"><img style="width: 100%;height :87%"src="../assests/image/level_one/cropImage/image_part_004.jpg"></div>
+    <div class="cropImg" id="cropImg2"><img style="width: 99%;height :87%"src="../assests/image/level_one/cropImage/image_part_003.jpg"></div>
+    <div class="cropImg" id="cropImg3"><img style="width: 100%;height :87%"src="../assests/image/level_one/cropImage/image_part_001.jpg"></div>
+    <div class="cropImg" id="cropImg4"><img style="width: 99%;height :87%"src="../assests/image/level_one/cropImage/image_part_002.jpg"></div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script>
+    $( function() {
+        $( "#cropImg1" ).draggable();
+        $( "#frame1" ).droppable({
+            drop: function( event, ui ) {
+                $( this )
+                    .addClass( "ui-state-highlight" )
+                    .find( "p" )
+                    .html( "Dropped!" );
+            }
+        });
+    } );
+    $( function() {
+        $( "#cropImg2" ).draggable();
+        $( "#frame2" ).droppable({
+            drop: function( event, ui ) {
+                $( this )
+                    .addClass( "ui-state-black" )
+                    .find( "p" )
+                    .html( "Dropped!" );
+            }
+        });
+    } );
+    $( function() {
+        $("#cropImg3").draggable();
+        $("#frame3").droppable({
+            drop: function( event, ui ) {
+                $( this )
+                    .addClass( "ui-state-black" )
+                    .find( "p" )
+                    .html( "Dropped!" );
+            }
+        });
+    } );
+    $( function() {
+        $( "#cropImg4" ).draggable();
+        $( "#frame4" ).droppable({
+            drop: function( event, ui ) {
+                $( this )
+                    .addClass( "ui-state-black" )
+                    .find( "p" )
+                    .html( "Dropped!" );
+            }
+        });
+    } );
+
+
+</script>
+</body>
+</html>
+</body>
+</html>
